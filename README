@@ -1,13 +1,7 @@
-## 15-07-2025
+SNP Analysis and Genome Consensus Generation Using Snakemake
 
+-This project aims to analyze Single Nucleotide Polymorphisms (SNPs) and generate a consensus genome from Variant Calls using Snakemake, a powerful workflow management system. 
 
-# Pipeline :
-
-
-
-- Analyse de variation genetique 
-- Gererer le genome consensus
-- Genere le genome assemblage (Spades) aprer l etape de trimming
-- genere un rapport d'info sur l'alignement sur les differents genome de ref adeno (genotype)
+# 15-07-2025
 
 
