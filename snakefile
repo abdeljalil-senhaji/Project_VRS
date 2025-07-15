@@ -8,7 +8,7 @@ rulePath=config["general_path"]["RULE_PATH"]
 
 
 include: rulePath+"/iget_samples_rule"
-include: rulePath+"/trimmomatic_rule"
+include: rulePath+"/cutadapt_rule"
 include: rulePath+"/bowtie2_rule"
 include: rulePath+"/samtools_process_rule"
 include: rulePath+"/ivar_rule"
@@ -42,7 +42,7 @@ with open("/scratch/recherche/asenhaji/v1_IllumiConsensusSNP_pipeline/db/list_re
 #genome_ids = 
 
 
-#trimmomatic = expand((output_path+"/{sample_id}/{sample_id}_R1_paired.fq.gz", output_path+"/{sample_id}/{sample_id}_R2_paired.fq.gz", output_path+"/{sample_id}/{sample_id}_R _unpaired_trim.fq.gz", output_path+"/{sample_id}/{sample_id}_R2_unpaired_trim.fq.gz"), sample_id = sample_ids),
+#cutadapt = expand((output_path+"/{sample_id}/{sample_id}_R1_paired.fq.gz", output_path+"/{sample_id}/{sample_id}_R2_paired.fq.gz", output_path+"/{sample_id}/{sample_id}_R _unpaired_trim.fq.gz", output_path+"/{sample_id}/{sample_id}_R2_unpaired_trim.fq.gz"), sample_id = sample_ids),
 #bowtie2 = expand((output_path+"/{sample_id}/{ref_id}/{sample_id}.sam"), sample_id =sample_ids, ref_id = ref_ids),
 
 #samtools_process = expand((output_path+"/{sample_id}/bowtie2_on_blast/{sample_id}_{ref_all_id}.ordered.bam"), sample_id = sample_ids, ref_all_id = ref_all_ids)
