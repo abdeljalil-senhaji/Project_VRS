@@ -13,7 +13,7 @@ include: rulePath+"/iget_reference_bowtie2_rule"
 include: rulePath+"/iget_location_rule"
 include: rulePath+"/bowtie2_rule"
 include: rulePath+"/samtools_process_rule"
-#include: rulePath+"/ivar_rule"
+include: rulePath+"/ivar_rule"
 
 
 
@@ -46,15 +46,15 @@ mate_ids = ["R1","R2"]
 #cutadapt = expand((output_path+"/{sample_id}/{sample_id}_R1_paired.fq.gz", output_path+"/{sample_id}/{sample_id}_R2_paired.fq.gz", output_path+"/{sample_id}/{sample_id}_R _unpaired_trim.fq.gz", output_path+"/{sample_id}/{sample_id}_R2_unpaired_trim.fq.gz"), sample_id = sample_ids),
 #bowtie2 = expand((output_path+"/{sample_id}/{ref_id}/{sample_id}.sam"), sample_id =sample_ids, ref_id = ref_ids),
 
-samtools_process = expand((output_path+"/{sample_id}/{ref_id}/{sample_id}_ordered.bam"), sample_id = sample_ids, ref_id = ref_ids)
+#samtools_process = expand((output_path+"/{sample_id}/{ref_id}/{sample_id}_ordered.bam"), sample_id = sample_ids, ref_id = ref_ids)
 
-#ivar = expand((output_path+"/{sample_id}/{ref_id}/{sample_id}_ivar_consensus.fa"), sample_id =sample_ids, ref_id = ref_ids)
+ivar = expand((output_path+"/{sample_id}/{ref_id}/{sample_id}_{ref_id}_consensus.fa"), sample_id = sample_ids, ref_id = ref_ids)
 
 
 		
 rule all:
         input:
-#               ivar
-               samtools_process
+               ivar
+#               samtools_process
         shell:
                 "touch "+output_path+"/done"

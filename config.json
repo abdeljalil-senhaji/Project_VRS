@@ -61,8 +61,8 @@
     "samtools_process" : {
         "OPTIONS": ""
     },
-        "ivar" : {
-        "OPTIONS_mpileup": "-aa -A -d 0 -Q 0",
+    "ivar" : {
+        "OPTIONS_mpileup": "-aa -A -d 0 -Q 0", 
         "OPTIONS_ivar": "-t 0.6 -m 10"
     }
 }

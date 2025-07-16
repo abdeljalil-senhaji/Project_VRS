@@ -1,6 +1,6 @@
 {
   "__default__": {
-    "name": "VRS A-B",
+    "name": "VRS-AB",
     "tags": "",
     "volume_snakemake": "snakemake",
     "volume_home": "home",

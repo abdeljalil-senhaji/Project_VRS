@@ -1,0 +1,14 @@
+rule ivar:
+    input:
+        bam = "{prefix}/{sample}/{ref_id}/{sample}_ordered.bam"
+    output:
+        consensus = "{prefix}/{sample}/{ref_id}/{sample}_{ref_id}_consensus.fa"
+    log:
+        "{prefix}/{sample}/logs/{sample}_{ref_id}_consensus.log"
+    params:
+        ivar_options = config["OPTIONS_ivar"]["OPTIONS"],
+        mpileup_options = config["OPTIONS_mpileup"]["OPTIONS"]
+    shell:
+        """
+        samtools mpileup {params.mpileup_options} {input.bam} | ivar consensus {params.ivar_options} -p  {output.consensus}  | tee -a {log} 
+        """
