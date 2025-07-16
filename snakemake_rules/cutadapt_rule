@@ -10,7 +10,6 @@ rule cutadapt:
     log:
         "{prefix}/{sample}/logs/{sample}.cutadapt.log"
     params:
-        trimmo_options = config["cutadapt"]["OPTIONS"],
-        trimmo_params = config["cutadapt"]["PARAMS"]
+        trimmo_options = config["cutadapt"]["OPTIONS"]
     shell:
         'cutadapt {params.trimmo_options} -o {output.R1} -p {output.R2} {input.R1} {input.R2}  | tee -a {log}'

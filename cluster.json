@@ -1,6 +1,6 @@
 {
   "__default__": {
-    "name": "adeno_7ref",
+    "name": "VRS A-B",
     "tags": "",
     "volume_snakemake": "snakemake",
     "volume_home": "home",
@@ -66,9 +66,9 @@
     "mem": 50,
     "image": "gitlab-bioinfo.aphp.fr:5000/sequoia-docker-tools/bowtie2:2.3.0-6"
   },
-  "samtools_index": {
-    "name":"samtools_index",
-    "tags": "snakemake,samtools_index",
+  "samtools_process": {
+    "name":"samtools_process",
+    "tags": "snakemake,samtools_process",
     "cpu": 2,
     "mem": 8,
     "image": "gitlab-bioinfo.aphp.fr:5000/sequoia-docker-tools/samtools:1.9-1"
