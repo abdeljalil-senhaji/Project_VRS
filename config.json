@@ -46,6 +46,12 @@
     "samtools_flagstat": {
         "OPTIONS": ""
     },
+        "iget_reference_bowtie2": {
+        "OPTIONS": ""
+    },
+        "iget_location": {
+        "OPTIONS": ""
+    },
     "bowtie2": {
         "OPTIONS": "-p 8 --very-sensitive-local"
     },
@@ -53,7 +59,7 @@
        "OPTIONS": ""
     },
     "samtools_process" : {
-        "OPTIONS": " -b "
+        "OPTIONS": ""
     },
         "ivar" : {
         "OPTIONS_mpileup": "-aa -A -d 0 -Q 0",

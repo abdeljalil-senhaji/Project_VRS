@@ -9,9 +9,11 @@ rulePath=config["general_path"]["RULE_PATH"]
 
 include: rulePath+"/iget_samples_rule"
 include: rulePath+"/cutadapt_rule"
+include: rulePath+"/iget_reference_bowtie2_rule"
+include: rulePath+"/iget_location_rule"
 include: rulePath+"/bowtie2_rule"
 include: rulePath+"/samtools_process_rule"
-include: rulePath+"/ivar_rule"
+#include: rulePath+"/ivar_rule"
 
 
 
@@ -22,7 +24,9 @@ output_path = config["general_path"]["OUTPUT_PATH"]
 
 
 sample_ids = []
+
 ref_ids = [refA, refB]
+
 sampleName=glob.glob("/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/data/*.fastq.gz")
 for name in sampleName:
     path = input_path + "/"
@@ -36,23 +40,21 @@ for name in sampleName:
 
 mate_ids = ["R1","R2"]
 
-with open("/scratch/recherche/asenhaji/v1_IllumiConsensusSNP_pipeline/db/list_ref.txt") as f:
-    ref_all_ids = [line.strip() for line in f if line.strip()]
 
-#genome_ids = 
 
 
 #cutadapt = expand((output_path+"/{sample_id}/{sample_id}_R1_paired.fq.gz", output_path+"/{sample_id}/{sample_id}_R2_paired.fq.gz", output_path+"/{sample_id}/{sample_id}_R _unpaired_trim.fq.gz", output_path+"/{sample_id}/{sample_id}_R2_unpaired_trim.fq.gz"), sample_id = sample_ids),
 #bowtie2 = expand((output_path+"/{sample_id}/{ref_id}/{sample_id}.sam"), sample_id =sample_ids, ref_id = ref_ids),
 
-#samtools_process = expand((output_path+"/{sample_id}/bowtie2_on_blast/{sample_id}_{ref_all_id}.ordered.bam"), sample_id = sample_ids, ref_all_id = ref_all_ids)
+samtools_process = expand((output_path+"/{sample_id}/{ref_id}/{sample_id}_ordered.bam"), sample_id = sample_ids, ref_id = ref_ids)
 
-ivar = expand((output_path+"/{sample_id}/{ref_id}/{sample_id}_ivar_consensus.fa"), sample_id =sample_ids, ref_id = ref_ids)
+#ivar = expand((output_path+"/{sample_id}/{ref_id}/{sample_id}_ivar_consensus.fa"), sample_id =sample_ids, ref_id = ref_ids)
 
 
 		
 rule all:
         input:
-               ivar
+#               ivar
+               samtools_process
         shell:
                 "touch "+output_path+"/done"
