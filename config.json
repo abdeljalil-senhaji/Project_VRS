@@ -53,7 +53,7 @@
         "OPTIONS": ""
     },
     "bowtie2": {
-        "OPTIONS": "-p 8 --very-sensitive-local"
+        "OPTIONS": "-p 8"
     },
     "samtools_index": {
        "OPTIONS": ""
