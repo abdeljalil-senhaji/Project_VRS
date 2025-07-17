@@ -1,0 +1,201 @@
+Provided cluster nodes: 50
+Job counts:
+	count	jobs
+	1	all
+	2	bowtie2
+	1	cutadapt
+	2	iget_location
+	2	iget_reference_bowtie2
+	2	iget_samples
+	2	ivar
+	2	samtools_process
+	14
+
+rule iget_samples:
+    output: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_001.fastq.gz
+    log: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_iget_samples.log
+    jobid: 13
+    wildcards: sample=762403575535_S1_L001, prefix=/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output, mate=R1
+
+cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/data/762403575535_S1_L001_R1_001.fastq.gz /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_001.fastq.gz
+
+rule iget_samples:
+    output: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_001.fastq.gz
+    log: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_iget_samples.log
+    jobid: 12
+    wildcards: sample=762403575535_S1_L001, prefix=/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output, mate=R2
+
+cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/data/762403575535_S1_L001_R2_001.fastq.gz /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_001.fastq.gz
+
+rule iget_reference_bowtie2:
+    output: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.1.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.rev.1.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.4.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.2.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.fasta.fai, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.3.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.rev.2.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.fasta
+    log: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA_iget_reference.log
+    jobid: 10
+    wildcards: sample=762403575535_S1_L001, prefix=/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output, ref_id=RSVA
+
+cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVA.fasta /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.fasta && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVA.fasta.fai /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.fasta.fai && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVA.1.bt2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.1.bt2 && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVA.2.bt2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.2.bt2 && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVA.3.bt2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.3.bt2 && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVA.4.bt2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.4.bt2 && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVA.rev.1.bt2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.rev.1.bt2 && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVA.rev.2.bt2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.rev.2.bt2
+
+rule iget_reference_bowtie2:
+    output: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.1.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.rev.1.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.4.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.2.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.fasta.fai, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.3.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.rev.2.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.fasta
+    log: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB_iget_reference.log
+    jobid: 8
+    wildcards: sample=762403575535_S1_L001, prefix=/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output, ref_id=RSVB
+
+cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVB.fasta /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.fasta && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVB.fasta.fai /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.fasta.fai && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVB.1.bt2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.1.bt2 && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVB.2.bt2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.2.bt2 && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVB.3.bt2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.3.bt2 && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVB.4.bt2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.4.bt2 && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVB.rev.1.bt2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.rev.1.bt2 && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF/RSVB.rev.2.bt2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.rev.2.bt2
+Finished job 13.
+1 of 14 steps (7%) done
+Finished job 12.
+2 of 14 steps (14%) done
+
+rule cutadapt:
+    input: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_001.fastq.gz, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_001.fastq.gz
+    output: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_paired.fq.gz, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_paired.fq.gz
+    log: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/logs/762403575535_S1_L001.cutadapt.log
+    jobid: 11
+    wildcards: sample=762403575535_S1_L001, prefix=/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output
+
+cutadapt -u 20 -u -20 -U 20 -U -20 -o /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_paired.fq.gz -p /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_paired.fq.gz /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_001.fastq.gz /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_001.fastq.gz  | tee -a /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/logs/762403575535_S1_L001.cutadapt.log
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.fasta.fai.
+Finished job 10.
+3 of 14 steps (21%) done
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.fasta.fai.
+Finished job 8.
+4 of 14 steps (29%) done
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_001.fastq.gz.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_001.fastq.gz.
+Finished job 11.
+5 of 14 steps (36%) done
+
+rule iget_location:
+    input: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_paired.fq.gz, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_paired.fq.gz
+    output: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_R1_paired.fq.gz, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_R2_paired.fq.gz
+    log: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_iget_location.log
+    jobid: 7
+    wildcards: sample=762403575535_S1_L001, prefix=/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output, ref_id=RSVB
+
+cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_paired.fq.gz /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_R1_paired.fq.gz && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_paired.fq.gz /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_R2_paired.fq.gz 
+
+rule iget_location:
+    input: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_paired.fq.gz, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_paired.fq.gz
+    output: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_R1_paired.fq.gz, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_R2_paired.fq.gz
+    log: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_iget_location.log
+    jobid: 9
+    wildcards: sample=762403575535_S1_L001, prefix=/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output, ref_id=RSVA
+
+cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_paired.fq.gz /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_R1_paired.fq.gz && cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_paired.fq.gz /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_R2_paired.fq.gz 
+Finished job 7.
+6 of 14 steps (43%) done
+
+rule bowtie2:
+    input: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.1.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_R2_paired.fq.gz, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.4.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_R1_paired.fq.gz, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.2.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.rev.1.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.fasta, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.rev.2.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.3.bt2
+    output: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001.sam
+    log: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/logs/762403575535_S1_L001.bowtie2.log
+    jobid: 5
+    wildcards: sample=762403575535_S1_L001, prefix=/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output, ref_id=RSVB
+
+docker_wrapper -c 'bowtie2 -p 8 -x /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB -1 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_R1_paired.fq.gz -2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_R2_paired.fq.gz -S /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001.sam' 2>&1 | tee -a /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/logs/762403575535_S1_L001.bowtie2.log
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_paired.fq.gz.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_paired.fq.gz.
+Finished job 9.
+7 of 14 steps (50%) done
+
+rule bowtie2:
+    input: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.1.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_R2_paired.fq.gz, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.4.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_R1_paired.fq.gz, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.2.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.rev.1.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.fasta, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.rev.2.bt2, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.3.bt2
+    output: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001.sam
+    log: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/logs/762403575535_S1_L001.bowtie2.log
+    jobid: 6
+    wildcards: sample=762403575535_S1_L001, prefix=/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output, ref_id=RSVA
+
+docker_wrapper -c 'bowtie2 -p 8 -x /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA -1 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_R1_paired.fq.gz -2 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_R2_paired.fq.gz -S /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001.sam' 2>&1 | tee -a /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/logs/762403575535_S1_L001.bowtie2.log
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_R2_paired.fq.gz.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_R1_paired.fq.gz.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.rev.1.bt2.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.2.bt2.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.rev.2.bt2.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.3.bt2.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.4.bt2.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.1.bt2.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/RSVA.fasta.
+Finished job 6.
+8 of 14 steps (57%) done
+
+rule samtools_process:
+    input: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001.sam
+    output: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_ordered.bam
+    log: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/logs/762403575535_S1_L001_RSVA_samtools_process.log
+    jobid: 4
+    wildcards: sample=762403575535_S1_L001, prefix=/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output, ref_id=RSVA
+
+
+        docker_wrapper -c "samtools view -b -o /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001.bam /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001.sam" &&
+        docker_wrapper -c "samtools sort -o /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_ordered.bam  /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001.bam" &&
+        docker_wrapper -c "samtools index /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_ordered.bam" 2>&1 | tee -a /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/logs/762403575535_S1_L001_RSVA_samtools_process.log &&
+        rm  /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001.bam 
+        
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_R2_paired.fq.gz.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_R1_paired.fq.gz.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.2.bt2.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.4.bt2.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.1.bt2.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.rev.1.bt2.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.3.bt2.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.rev.2.bt2.
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/RSVB.fasta.
+Finished job 5.
+9 of 14 steps (64%) done
+
+rule samtools_process:
+    input: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001.sam
+    output: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_ordered.bam
+    log: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/logs/762403575535_S1_L001_RSVB_samtools_process.log
+    jobid: 3
+    wildcards: sample=762403575535_S1_L001, prefix=/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output, ref_id=RSVB
+
+
+        docker_wrapper -c "samtools view -b -o /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001.bam /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001.sam" &&
+        docker_wrapper -c "samtools sort -o /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_ordered.bam  /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001.bam" &&
+        docker_wrapper -c "samtools index /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_ordered.bam" 2>&1 | tee -a /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/logs/762403575535_S1_L001_RSVB_samtools_process.log &&
+        rm  /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001.bam 
+        
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001.sam.
+Finished job 4.
+10 of 14 steps (71%) done
+
+rule ivar:
+    input: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_ordered.bam
+    output: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_RSVA_consensus.fa
+    log: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/logs/762403575535_S1_L001_RSVA_consensus.log
+    jobid: 2
+    wildcards: sample=762403575535_S1_L001, prefix=/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output, ref_id=RSVA
+
+
+        samtools mpileup -aa -A -d 0 -Q 0 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_ordered.bam | ivar consensus -t 0.6 -m 10 -p  /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_RSVA_consensus.fa  | tee -a /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/logs/762403575535_S1_L001_RSVA_consensus.log 
+        mkdir -p /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/RSVA_all_sample &&         cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_RSVA_consensus.fa /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/RSVA_all_sample/ 
+        
+Removing temporary output file /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001.sam.
+Finished job 3.
+11 of 14 steps (79%) done
+
+rule ivar:
+    input: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_ordered.bam
+    output: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_RSVB_consensus.fa
+    log: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/logs/762403575535_S1_L001_RSVB_consensus.log
+    jobid: 1
+    wildcards: sample=762403575535_S1_L001, prefix=/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output, ref_id=RSVB
+
+
+        samtools mpileup -aa -A -d 0 -Q 0 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_ordered.bam | ivar consensus -t 0.6 -m 10 -p  /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_RSVB_consensus.fa  | tee -a /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/logs/762403575535_S1_L001_RSVB_consensus.log 
+        mkdir -p /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/RSVB_all_sample &&         cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_RSVB_consensus.fa /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/RSVB_all_sample/ 
+        
+Finished job 2.
+12 of 14 steps (86%) done
+Finished job 1.
+13 of 14 steps (93%) done
+
+rule all:
+    input: /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_RSVA_consensus.fa, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_RSVA_consensus.fa, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_RSVB_consensus.fa, /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_RSVB_consensus.fa
+    jobid: 0
+
+touch /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/done
+Finished job 0.
+14 of 14 steps (100%) done

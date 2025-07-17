@@ -1,0 +1,6 @@
+
+        docker_wrapper -c "samtools view -b -o /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001.bam /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001.sam" &&
+        docker_wrapper -c "samtools sort -o /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_ordered.bam  /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001.bam" &&
+        docker_wrapper -c "samtools index /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001_ordered.bam" 2>&1 | tee -a /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/logs/762403575535_S1_L001_RSVB_samtools_process.log &&
+        rm  /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVB/762403575535_S1_L001.bam 
+        

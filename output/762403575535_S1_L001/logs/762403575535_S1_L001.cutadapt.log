@@ -1,0 +1,19 @@
+This is cutadapt 1.12 with Python 3.5.3
+Command line parameters: -u 20 -u -20 -U 20 -U -20 -o /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_paired.fq.gz -p /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_paired.fq.gz /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R1_001.fastq.gz /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/762403575535_S1_L001_R2_001.fastq.gz
+Trimming 0 adapters with at most 10.0% errors in paired-end mode ...
+Finished in 41.71 s (105 us/read; 0.57 M reads/minute).
+
+=== Summary ===
+
+Total read pairs processed:            396,402
+  Read 1 with adapter:                       0 (0.0%)
+  Read 2 with adapter:                       0 (0.0%)
+Pairs written (passing filters):       396,402 (100.0%)
+
+Total basepairs processed:   101,927,168 bp
+  Read 1:    50,829,091 bp
+  Read 2:    51,098,077 bp
+Total written (filtered):     70,239,432 bp (68.9%)
+  Read 1:    34,985,523 bp
+  Read 2:    35,253,909 bp
+

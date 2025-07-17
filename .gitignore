@@ -13,15 +13,12 @@
 *.gz
 *.taxids.txt
 *.zip
-*.jalil
-*.sh
+
 
 # db  
-/data/
 /database/
 /db/
 /results/
-/output/
 /logs/
 /.snakemake/
 /ListTaxIdV1/
