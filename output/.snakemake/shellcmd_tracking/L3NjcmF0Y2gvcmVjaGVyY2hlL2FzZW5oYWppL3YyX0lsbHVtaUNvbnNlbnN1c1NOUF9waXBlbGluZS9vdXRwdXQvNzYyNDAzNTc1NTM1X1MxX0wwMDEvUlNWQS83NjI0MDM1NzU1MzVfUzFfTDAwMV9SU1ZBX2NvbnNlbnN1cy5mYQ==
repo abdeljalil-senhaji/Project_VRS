@@ -1,4 +1,0 @@
-
-        samtools mpileup -aa -A -d 0 -Q 0 /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_ordered.bam | ivar consensus -t 0.6 -m 10 -p  /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_RSVA_consensus.fa  | tee -a /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/logs/762403575535_S1_L001_RSVA_consensus.log 
-        mkdir -p /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/RSVA_all_sample &&         cp /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/762403575535_S1_L001/RSVA/762403575535_S1_L001_RSVA_consensus.fa /scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/output/RSVA_all_sample/ 
-        
