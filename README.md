@@ -94,3 +94,9 @@ output/
 
 ## Contributing
 Contributions are welcome! If you have suggestions for improvements, please open an issue or submit a pull request.
+
+## Contact
+
+👤 Abdeljalil Senhaji Rachik
+📧 senhajirachikabdeljalil@gmail.com
+🐙 GitHub
