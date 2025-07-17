@@ -1,5 +1,5 @@
 # Project_VRS: A Snakemake Pipeline for Viral SNP Analysis and Consensus Genome Generation
-
+[![Documentation](https://img.shields.io/badge/Documentation-github-brightgreen.svg?style=for-the-badge)](https://github.com/abdeljalil-senhaji/Project_VRS)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
