@@ -37,7 +37,7 @@ Modify the config.json file to specify the paths to your input files and adjust 
 {
 {
     "description": "This config file is designed to run pipeline.",
-    "author": "ABDELJALIL",
+    "author": "",
     "general_path": {
         "INPUT_PATH": "path/to/your/data",
         "OUTPUT_PATH": "path/to/your/output",
