@@ -1,4 +1,5 @@
 # file
+
 *.fastq
 *.fasta
 *.fa
