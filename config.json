@@ -8,8 +8,8 @@
         "REF_DATA": "/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/VRS_REF"
     },
     "general_informations": {
-        "HTML_TEMPLATES": "/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/script/template",
-        "SCRIPT": "/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/script/report_html.py",
+        "HTML_TEMPLATES": "",
+        "SCRIPT": "",
         "PIPELINE": "",
         "USER": "",
         "MAIL": "",
