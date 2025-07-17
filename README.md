@@ -54,3 +54,43 @@ Ensure your reference genome file (e.g., VRS_REF/reference.fasta) is indexed by 
 ## Usage
 
 Snakemake makes running the pipeline simple and robust.
+
+* 1- Clean cache:
+Script to delete the cache file in output to avoid the bug.
+```bash
+bash clean.sh
+```
+* 2- Execution:
+Run the pipeline on your machine, using a specified script with commandline.
+```bash
+bash commandline.sh
+```
+* 3- HPC Cluster execution:
+This pipeline is configured to run on an HPC cluster with a scheduler like Godocker. The cluster.json file contains default resource allocations.
+```bash
+bash commandline_return.sh
+```
+
+## Output Directory Structure
+All results will be generated in the directory specified in config.json (e.g., output/). The structure will be as follows:
+
+
+```bash
+output/
+├── trimmed/                # Trimmed FASTQ files
+│   ├── sample1_R1.trimmed.fastq.gz
+│   └── sample1_R2.trimmed.fastq.gz
+├── aligned/                # Sorted, deduplicated BAM files and indices
+│   ├── sample1.dedup.bam
+│   └── sample1.dedup.bam.bai
+├── variants/               # VCF files from variant calling
+│   └── sample1.vcf
+├── consensus/              # Final consensus genomes
+│   └── sample1.consensus.fasta
+└── qc/                     # Quality control reports (e.g., from FastQC)
+    ├── sample1_fastqc.html
+    └── ...
+```
+
+## Contributing
+Contributions are welcome! If you have suggestions for improvements, please open an issue or submit a pull request.
