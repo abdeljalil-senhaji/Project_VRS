@@ -39,9 +39,9 @@ Modify the config.json file to specify the paths to your input files and adjust 
     "description": "This config file is designed to run pipeline.",
     "author": "ABDELJALIL",
     "general_path": {
-        "INPUT_PATH": "path/to/your//data",
-        "OUTPUT_PATH": "path/to/your//output",
-        "RULE_PATH": "path/to/your//snakemake_rules",
+        "INPUT_PATH": "path/to/your/data",
+        "OUTPUT_PATH": "path/to/your/output",
+        "RULE_PATH": "path/to/your/snakemake_rules",
         "REF_DATA": "path/to/your/VRS_REF"
     },
     ... 
