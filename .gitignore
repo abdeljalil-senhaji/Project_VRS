@@ -1,6 +1,8 @@
 # file
 *.fastq
 *.fasta
+*.fa
+*.qual.txt
 *.fq
 *.bam
 *.cram
@@ -13,14 +15,14 @@
 *.gz
 *.taxids.txt
 *.zip
-
+*.log
 
 # db  
 /database/
 /db/
 /results/
 /logs/
-/.snakemake/
+.snakemake/
 /ListTaxIdV1/
 # file temporaires
 *.tmp
@@ -36,3 +38,4 @@ __pycache__
 # OS files
 .DS_Store
 Thumbs.db
+save.sh
