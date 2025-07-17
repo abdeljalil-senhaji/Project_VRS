@@ -25,7 +25,7 @@ output_path = config["general_path"]["OUTPUT_PATH"]
 
 sample_ids = []
 
-ref_ids = ["RSVA.reference", "RSVB.reference"]
+ref_ids = ["RSVA", "RSVB"]
 
 sampleName=glob.glob("/scratch/recherche/asenhaji/v2_IllumiConsensusSNP_pipeline/data/*.fastq.gz")
 for name in sampleName:

@@ -6,9 +6,11 @@ rule ivar:
     log:
         "{prefix}/{sample}/logs/{sample}_{ref_id}_consensus.log"
     params:
-        ivar_options = config["OPTIONS_ivar"]["OPTIONS"],
-        mpileup_options = config["OPTIONS_mpileup"]["OPTIONS"]
+        ivar_options = config["ivar"]["OPTIONS_ivar"],
+        mpileup_options = config["ivar"]["OPTIONS_mpileup"]
     shell:
         """
         samtools mpileup {params.mpileup_options} {input.bam} | ivar consensus {params.ivar_options} -p  {output.consensus}  | tee -a {log} 
+        mkdir -p {wildcards.prefix}/{wildcards.ref_id}_all_sample && \
+        cp {wildcards.prefix}/{wildcards.sample}/{wildcards.ref_id}/{wildcards.sample}_{wildcards.ref_id}_consensus.fa {wildcards.prefix}/{wildcards.ref_id}_all_sample/ 
         """
